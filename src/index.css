@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+
+  --font-sans: Inter, "Segoe UI", sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  --page: #111314;
+  --surface: #181a1b;
+  --surface-raised: #222526;
+  --editor: #141617;
+  --key-surface: #202324;
+  --border: rgb(235 239 240 / 8%);
+  --border-strong: rgb(235 239 240 / 13%);
+  --text-primary: #e7e9e9;
+  --text-secondary: #a4aaaa;
+  --text-muted: #818888;
+  --text-faint: #737b7b;
+  --accent: #e8ad60;
+  --accent-wash: rgb(232 173 96 / 12%);
+  --accent-wash-strong: rgb(232 173 96 / 18%);
+  --success: #78ba91;
+  --error: #df7771;
+  --error-wash: rgb(223 119 113 / 12%);
+  --error-wash-strong: rgb(223 119 113 / 18%);
+  --scroll-thumb: #3a4040;
+
+  --zone-pinky: #ef9188;
+  --zone-ring: #e8ba68;
+  --zone-middle: #67d1a2;
+  --zone-index: #86baf5;
+  --zone-thumb: #b6c0c6;
+
+  --code-default: #929a99;
+  --code-keyword: #a0abb5;
+  --code-string: #9fa99b;
+  --code-type: #aaa393;
+  --code-number: #ad9c8f;
+  --code-comment: #7d8584;
+
+  color: var(--text-primary);
+  background: var(--page);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 20rem;
+  min-height: 100%;
+  background: var(--page);
+}
+
+body {
+  min-width: 20rem;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--page);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 0.125rem solid var(--accent);
+  outline-offset: 0.1875rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+::selection {
+  background: rgb(232 173 96 / 24%);
+  color: var(--text-primary);
+}
